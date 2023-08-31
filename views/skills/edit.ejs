@@ -1,0 +1,16 @@
+<%- include('../partials/header', {title: 'test' } ) %>
+    <div class="container">
+        <div class="card col-md-4 offset-md-4 text-center" style="width: 18rem;">
+            <h1>Update Skill</h1>
+            <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off" class="mb-3">
+                <input type="text" name="name" class="form-control" placeholder="New Skill" value="<%= skill.name %>">
+                <label for="hasSkill"> Have Skill:
+                    <input type="checkbox" name="hasSkill" id="hasSkill" <%=skill.hasSkill ? 'checked' : '' %> >
+                </label>
+                <br>
+                <button type="submit" class="btn btn-success mb-3">Update Skill</button>
+            </form>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>

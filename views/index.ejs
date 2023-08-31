@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html>
-<%- include('bonuses/head', {title: 'My Dev Skill' } ) %>
+<%- include('partials/header', { title: 'My Dev Skills' }) %>
 
-  <body>
-    <h1>
-      <%= title %>
-    </h1>
-    <p>Welcome to <%= title %>
-    </p>
-    <a href="/skills">Go to Skills</a>
-  </body>
-
-</html>
+  <h1>
+    <%= title %>
+  </h1>
+  <p>Welcome to <%= title %>
+  </p>
+  <a href="/skills/new">Add Skill</a>
+  <a href="/skills">Go to Skills</a>
+  <%- include('partials/footer') %>

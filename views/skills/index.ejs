@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html>
+<%- include('../partials/header', {title: 'All Skills' } ) %>
 
-<%- include('../bonuses/head', {title: 'Skills' } ) %>
-
-    <body class="container">
-        <h1 class="text-center">All Skills</h1>
-        <div class="col-md-4 offset-md-4 text-center">
-            <div class="list-group">
-                <% for(const skill of skills) { %>
-                    <a href="/skills/<%= skill.id %>" class="list-group-item list-group-item-action">
-                        <%= skill.name %>
-                    </a>
-                    <% } %>
-            </div>
+    <h1 class="text-center">All Skills</h1>
+    <div class="col-md-4 offset-md-4 text-center">
+        <div class="list-group">
+            <% for(const skill of skills) { %>
+                <a href="/skills/<%= skill.id %>" class="list-group-item list-group-item-action">
+                    <%= skill.name %>
+                </a>
+                <% } %>
+                    <a href="/skills/new">Add Skill</a>
         </div>
-    </body>
-
-</html>
+    </div>
+    <%- include('../partials/footer') %>

@@ -1,0 +1,12 @@
+<%- include('../partials/header', {title: 'New Skill' } ) %>
+    <div class="container">
+        <div class="card col-md-4 offset-md-4 text-center" style="width: 18rem;">
+            <h1>Add New Skill</h1>
+            <form action="/skills" method="POST" autocomplete="off" class="mb-3">
+                <input type="text" name="name" class="form-control" placeholder="New Skill">
+                <button type="submit" class="btn btn-success mb-3">Add Skill</button>
+            </form>
+        </div>
+    </div>
+
+    <%- include('../partials/footer') %>
